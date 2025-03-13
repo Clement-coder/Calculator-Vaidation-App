@@ -47,13 +47,13 @@
 
         <form class="gap-10" action="">
             <h1>Register Now !!</h1>
-            <p id="nameError" class="text-white"></p>
+            <p id="nameError" class="text-white transition-all duration-3000 ease-in-out"></p>
             <input  id="nameField" class="border h-10 pl-4 rounded-xl border-gray-500 w-86" type="text" placeholder="Enter Name">
-            <p id="passwordError" class="text-white"></p>
+            <p id="passwordError" class="text-white transition-all duration-3000 ease-in-out"></p>
             <input  id="passwordField" class="border mt-2 h-10 pl-4 rounded-xl border-gray-500 w-86" type="password" placeholder="Enter Password">
-            <p id="numberError" class="text-white"></p>
+            <p id="numberError" class="text-white transition-all duration-3000 ease-in-out"></p>
             <input  id="numberField" class="border mt-2 h-10 pl-4 rounded-xl border-gray-500 w-86" type="number" placeholder="Enter phone No">
-            <p id="ageError" class="text-white"></p>
+            <p id="ageError" class="text-white transition-all duration-3000 ease-in-out"></p>
             <input  id="ageField" class="border mt-2 h-10 pl-4 rounded-xl border-gray-500 w-86" type="number" placeholder="Enter Age">
         </form>
             <button id="signBtn" type="submit" class="mt-2 text-md font-bold border border-gray-500 rounded-xl px-4 py-2">Submit Form</button>
@@ -67,7 +67,7 @@
 
     <script>
       
-      document.getElementById("signBtn").addEventListener('click', () => {
+    document.getElementById("signBtn").addEventListener('click', () => {
     let nameField = document.getElementById("nameField").value.trim();
     let passwordField = document.getElementById("passwordField").value.trim();
     let numberField = document.getElementById("numberField").value.trim();
