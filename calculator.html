@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Clems Calculator</title>
+</head>
+<body class="bg-white flex items-center justify-center h-screen text-white">
+    <div class="p-5 bg-gray-300 rounded-lg shadow-md">
+        <input id="num1" type="number" class="p-2 m-2 w-44 text-black rounded focus:outline-none" placeholder="Enter number">
+        <input id="num2" type="number" class="p-2 m-2 w-44 text-black rounded focus:outline-none" placeholder="Enter number">
+        <div class="flex gap-2 mt-3">
+            <button onclick="calculate('+')" class="px-4 w-32 text-center  py-2 bg-blue-500 rounded">Addition</button>
+            <button onclick="calculate('-')" class="px-4 w-32 text-center  py-2 bg-red-500 rounded">Subtract</button>
+            <button onclick="calculate('*')" class="px-4 w-32 text-center  py-2 bg-green-500 rounded">Product</button>
+            <button onclick="calculate('/')" class="px-4 w-32 text-center  py-2 bg-yellow-500 rounded">Divide</button>
+        </div>
+        <p class="mt-3 text-lg font-bold"> <span id="result"></span></p>
+    </div>
+
+    <script>
+        function calculate(clemsCalculate) {
+            let num1 = parseFloat(document.getElementById("num1").value) || 0;
+            let num2 = parseFloat(document.getElementById("num2").value) || 0;
+            // let result = 0;
+            if (clemsCalculate === '+') result = num1 + num2;
+            if (clemsCalculate === '-') result = num1 - num2;
+            if (clemsCalculate === '*') result = num1 * num2;
+            if (clemsCalculate === '/') result = num2 !== 0 ? num1 / num2 : 'Cannot divide by zero!';
+            document.getElementById("result").innerText = (`Result: ${result}`)
+        }
+    </script>
+</body>
+</html>

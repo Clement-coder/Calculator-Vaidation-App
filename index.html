@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-center justify-center">
+    <!-- <h1 class="text-4xl">
+        Hello world
+    </h1>
+
+    <div class="group" id="welcome">
+        Ah ah nawa for u ooo brooo
+    </div>
+
+    <button class="border border-gray-500 px-4 py-2" id="buy"><a href="">Buy</a></button> -->
+
+    <div>
+        <div class="flex items-center justify-between bg-gray-100 p-6 m-4 rounded-2xl">
+            <h1 class="text-2xl ">Clems Blog</h1>
+            <div>
+                <ul class="flex items-center text-gray-700 text-xl gap-10">
+                    <li class="hover:text-gray-500 transition duration-3000 cursor-pointer">Home</li>
+                    <li class="hover:text-gray-500 transition duration-3000 cursor-pointer">Contact</li>
+                    <li class="hover:text-gray-500 transition duration-3000 cursor-pointer">About</li>
+                    <li class="hover:text-gray-500 transition duration-3000 cursor-pointer">Blog</li>
+                </ul>
+               
+            </div>
+            <div>
+            <button class="text-md font-bold border border-gray-500 rounded-xl px-4 py-2">SIGN UP</button>
+            <button class="text-md font-bold border border-gray-500 rounded-xl px-4 py-2">LOG IN</button>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="pt-16">
+                <h1 class="text-4xl py-4">WELCOME TO CLEMS BLOG</h1>
+                <p class="py-1">Get Ready for the big Deals</p>
+                <button class="relative top-10 border border-gray-500  font-bold text-md font-bold rounded-2xl px-8 py-4"><a href="">Get started</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-[100px]">
+
+        <form class="gap-10" action="">
+            <h1>Register Now !!</h1>
+            <p id="nameError" class="text-white"></p>
+            <input  id="nameField" class="border h-10 pl-4 rounded-xl border-gray-500 w-86" type="text" placeholder="Enter Name">
+            <p id="passwordError" class="text-white"></p>
+            <input  id="passwordField" class="border mt-2 h-10 pl-4 rounded-xl border-gray-500 w-86" type="password" placeholder="Enter Password">
+            <p id="numberError" class="text-white"></p>
+            <input  id="numberField" class="border mt-2 h-10 pl-4 rounded-xl border-gray-500 w-86" type="number" placeholder="Enter phone No">
+            <p id="ageError" class="text-white"></p>
+            <input  id="ageField" class="border mt-2 h-10 pl-4 rounded-xl border-gray-500 w-86" type="number" placeholder="Enter Age">
+        </form>
+            <button id="signBtn" type="submit" class="mt-2 text-md font-bold border border-gray-500 rounded-xl px-4 py-2">Submit Form</button>
+
+    </div>
+
+    
+
+
+
+
+    <script>
+      
+      document.getElementById("signBtn").addEventListener('click', () => {
+    let nameField = document.getElementById("nameField").value.trim();
+    let passwordField = document.getElementById("passwordField").value.trim();
+    let numberField = document.getElementById("numberField").value.trim();
+    let ageField = document.getElementById("ageField").value.trim();
+
+    let nameError = document.getElementById("nameError");
+    let passwordError = document.getElementById("passwordError");
+    let numberError = document.getElementById("numberError");
+    let ageError = document.getElementById("ageError");
+
+    let isValid = true;
+
+    if (!nameField) {
+        nameError.style.color = "red";
+        nameError.innerHTML = "Enter name field";
+        isValid = false;
+    } else {
+        nameError.innerHTML = (`<p class="text-green-400">Nice one boy</p>`);
+    }
+
+    if (!passwordField) {
+        passwordError.style.color = "red";
+        passwordError.innerHTML = "Enter password field";
+        isValid = false;
+    } else {
+        passwordError.innerHTML = (`<p class="text-green-400">Nice one boy</p>`);
+    }
+
+    if (!numberField) {
+        numberError.style.color = "red";
+        numberError.innerHTML = "Enter full number field";
+        isValid = false;
+    } else {
+        numberError.innerHTML = (`<p class="text-green-400">Nice one boy</p>`);
+    }
+
+    if (!ageField) {
+        ageError.style.color = "red";
+        ageError.innerHTML = "Enter Age";
+        isValid = false;
+    } else {
+        ageError.innerHTML = (`<p class="text-green-400">Nice one boy</p>`);
+    }
+
+    if (isValid) {
+        alert(`Welcome ${nameField}`);
+    }
+});
+
+
+        
+        // let welcome = document.getElementById('welcome')
+        // let buyButton = document.querySelector('#buy')
+        // buyButton.addEventListener('click', () =>{
+        //     welcome.style.display = "none";
+        //     // welcome.style.display = "block"
+        // })
+        
+
+        // document.getElementsByClassName('group')[0].innerHTML = (`<h1 class="text-blue-500 text-2xl">Clement Raymond</h1>`)
+        // document.getElementsByClassName('group')[1].innerHTML = (`<h1 class="text-blue-500 text-2xl">Clement Raymond</h1>`)
+        // document.getElementsByClassName('group')[2].innerHTML = (`<h1 class="text-blue-500 text-2xl">Clement Raymond</h1>`)
+        // document.getElementsByClassName('group')[3].innerHTML = (`<h1 class="text-blue-500 text-2xl">Clement Raymond</h1>`)
+        // document.getElementsByClassName('group')[4].innerHTML = (`<h1 class="text-blue-500 text-2xl">Clement Raymond</h1>`)
+        // document.getElementById("#groups").innerHTML = (`<h1 class="text-blue-500 text-2xl">Clement the boss</h1>`)
+        // document.getElementById("#groupss").innerHTML = (`<h1 class="text-blue-500 text-2xl">Clement the boss</h1>`)
+        // document.getElementById("#groupss").innerHTML = (`<h1 class="text-blue-500 text-2xl">Clement the boss</h1>`)
+
+        // document.getElementById("content").innerHTML = (`<h1 class="text-blue-500 text-2xl">Clement Raymond</h1>`)
+        // let hello = document.querySelector("#hello").addEventListener()
+
+        // document.createElement('button')
+        // a.textContent = 'Buy'
+        // document.querySelector('#welcome').appendChild(a)
+
+        
+
+
+
+
+    </script>
+</body>
+</html>
